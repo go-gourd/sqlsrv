@@ -1,4 +1,4 @@
-module mysql
+module github.com/go-gourd/mysql
 
 go 1.20
 
