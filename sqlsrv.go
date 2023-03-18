@@ -1,4 +1,4 @@
-package mysql
+package sqlsrv
 
 import (
 	"errors"
