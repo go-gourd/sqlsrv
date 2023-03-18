@@ -40,10 +40,11 @@ func GetDb(name string) (*gorm.DB, error) {
 
 	dsnParam := ""
 	if conf.Param != "" {
-		dsnParam = "?" + conf.Param
+		dsnParam = "&" + conf.Param
 	}
 	dsnF := "sqlserver://%s:%s@%s:%d?database=%s%s"
 	dsn := fmt.Sprintf(dsnF, conf.User, conf.Pass, conf.Host, conf.Port, conf.Database, dsnParam)
+	fmt.Println(dsn)
 
 	// 慢日志阈值
 	slowLogTime := conf.SlowLogTime
